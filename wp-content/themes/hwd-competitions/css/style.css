@@ -85,11 +85,15 @@ body {
 body.custom-background {
   background-color: #000 !important;
 }
-body.post-type-archive-winners {
+body.post-type-archive-winners,
+body.single-winners .recent-winners{
   background: #F6F1EB url('./../images/page-bg.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+}
+body.single-winners {
+  background-color: #F6F1EB !important;
 }
 
 a {
@@ -130,6 +134,10 @@ input[type="button"] {
 .btn-lg {
   font-size: 14px;
   padding: 18px 38px;
+}
+.btn-xl {
+  font-size: 16px;
+  padding: 22px 70px;
 }
 
 /*Button*/
@@ -693,7 +701,6 @@ img {
   padding: 0px 15px;
 }
 
-body.single .main-content,
 .woocommerce-cart .main-content {
   padding: 100px 0 0 0;
 }
@@ -1188,14 +1195,6 @@ button.single_add_to_cart_button.button.alt.lty-participate-now-button.lty_manua
   content: "";
 }
 
-.btn-xl {
-  display: inline-block;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: normal;
-  padding: 21px 36px;
-  letter-spacing: 0.68px;
-}
 
 .btn-l {
   display: inline-block;
@@ -1403,9 +1402,13 @@ body.featured-image-custom-height
 }
 
 .content-wrapper {
-  padding: 0px 15px 1px 15px;
+  padding: 0px 15px 0 15px;
   margin: 0 -15px;
   overflow-wrap: break-word;
+}
+.single-winners .content-wrapper {
+  margin: 0;
+  padding: 0;
 }
 
 .main-content article.post.sticky {
@@ -3224,6 +3227,12 @@ input[required] + label:after {
   background: #e7eef0;
   width: 1px;
   height: 86px;
+  display: block;
+}
+.single-winners .section-heading {
+  display: none;
+}
+.single-winners .recent-winners .section-heading {
   display: block;
 }
 
@@ -5417,15 +5426,37 @@ span.youtube-play:before {
   width: 100%;
   height: auto;
   object-fit: cover;
-  max-height: 600px;
+  max-height: 500px;
 }
-.single-winners .winner-name {
-  font-size: 24px;
-  line-height: 30px;
+.single-winners .winner-heading {
+  font-size: 30px;
+  line-height: 38px;
   text-transform: uppercase;
   font-weight: 700;
-  color: white;
+  color: #7F481C;
 }
+.single-winners .winner-name {
+  font-size: 20px;
+  line-height: 38px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #A77935;
+}
+.single-winners p {
+  font-size: 16px;
+  line-height: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #412E23;
+}
+.single-winners .recent-winners {
+  padding: 80px 0;
+}
+.single-winners .recent-winners .section-heading p {
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--primary-color);
+}
+
 
 .row.equal-height {
   display: flex;
@@ -5968,9 +5999,6 @@ form.woocommerce-ResetPassword.lost_reset_password {
   .slider-competition .product-information .price {
     font-size: 42px;
   }
-  .btn-xl {
-    font-size: 24px;
-  }
   .slider-competition .background-image > img {
     height: 500px;
   }
@@ -6494,7 +6522,6 @@ form.woocommerce-ResetPassword.lost_reset_password {
     width: 64px;
     margin-bottom: 24px;
   }
-  body.single .main-content,
   body.woocommerce-cart .main-content {
     padding: 50px 0 0 0;
   }
@@ -6783,6 +6810,45 @@ footer#footer h5 {
   z-index: -1;
 }
 
+/*Call to Action Section ===========*/
+.cta {
+  background: rgb(211,177,102);
+  background: -moz-linear-gradient(45deg,  rgba(211,177,102,1) 0%, rgba(167,121,54,1) 100%);
+  background: -webkit-linear-gradient(45deg,  rgba(211,177,102,1) 0%,rgba(167,121,54,1) 100%);
+  background: linear-gradient(45deg,  rgba(211,177,102,1) 0%,rgba(167,121,54,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3b166', endColorstr='#a77936',GradientType=1 );
+  padding: 90px 0;
+}
+.cta h1,
+.cta h2,
+.cta h3,
+.cta h4,
+.cta h5,
+.cta h6,
+.cta p {
+  color: var(--color-white);
+}
+
+.cta h1 {
+  line-height: 45px;
+}
+.cta h2 {
+  line-height: 40px;
+}
+.cta h3 {
+  line-height: 32px;
+}
+.cta h4 {
+  line-height: 26px;
+}
+.cta h5 {
+  line-height: 20px;
+}
+.cta h6 {
+  line-height: 20px;
+}
+
+
 /*Testimonials Section ===========*/
 .vc_custom_1617345474605 {
   position: relative;
@@ -6830,6 +6896,17 @@ footer#footer h5 {
     letter-spacing: 1px;
   }
 
+  /*Call to Action Section ===========*/
+  .cta {
+    text-align: center;
+  }
+  .cta .text-right {
+    text-align: center;
+  }
+  .cta .btn {
+    margin-top: 20px;
+  }
+
   /*Testimonials Section ===========*/
   .reviews .review-item {
     padding: 70px 0 0 530px;
@@ -6867,6 +6944,12 @@ footer#footer h5 {
   .counter .col:after {
     height: 100px;
     background-size: auto 100%;
+  }
+
+  /*Call to Action Section ===========*/
+  .cta {
+    text-align: center;
+    padding: 90px 0;
   }
 
   /*About Section ===========*/
