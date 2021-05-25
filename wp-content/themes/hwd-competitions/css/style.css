@@ -4460,7 +4460,7 @@ a.checkout-button.button.alt.wc-forward:hover {
 .mark, mark {
   background-color: transparent !important;
   padding: .2em;
-  color: #f78500 !important;
+  color: var(--secondary-color) !important;
 }
 .single-product .lty-lottery-timer #lty_lottery_days,
 .single-product .lty-lottery-timer #lty_lottery_hours,
@@ -5636,11 +5636,15 @@ span.youtube-play:before {
 }
 
 h2.woocommerce-order-details__title {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.4px;
-  color: #000;
+  color: var(--color-white);
+  border-top: 1px solid #ffffff20;
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .woocommerce ul.order_details {
