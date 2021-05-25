@@ -37,7 +37,7 @@
 
   /* Primary Button */
   --primary-button-background: transparent
-    linear-gradient(180deg, #f7d800 0%, #ff8401 100%);
+  linear-gradient(180deg, #f7d800 0%, #ff8401 100%);
   --primary-button-text-color: var(--color-black);
   --primary-button-border-color: transparent;
   --primary-button-hover-background: var(--color-white);
@@ -84,6 +84,13 @@ body {
 
 body.custom-background {
   background-color: #000 !important;
+}
+body.post-type-archive-winners,
+body.woocommerce-cart{
+  background: #F6F1EB url('./../images/page-bg.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
 a {
@@ -1350,9 +1357,9 @@ body.featured-image-custom-height .header-image .fade-in-img {
 }
 
 body.featured-image-custom-height
-  .header-image
-  .fade-in-img
-  .fade-in-img-inner-wrap {
+.header-image
+.fade-in-img
+.fade-in-img-inner-wrap {
   position: absolute;
   top: 0;
   right: 0;
@@ -1362,10 +1369,10 @@ body.featured-image-custom-height
 }
 
 body.featured-image-custom-height
-  .header-image
-  .fade-in-img
-  .fade-in-img-inner-wrap
-  img {
+.header-image
+.fade-in-img
+.fade-in-img-inner-wrap
+img {
   position: absolute;
   left: 50%;
   width: auto;
@@ -1381,8 +1388,8 @@ body.featured-image-custom-height
 
 .vc-clearfix hr {
   background: black
-    radial-gradient(closest-side at 50% 50%, #ffe100 0%, #ffe10000 100%) 0% 0%
-    no-repeat padding-box;
+  radial-gradient(closest-side at 50% 50%, #ffe100 0%, #ffe10000 100%) 0% 0%
+  no-repeat padding-box;
   height: 12px;
   top: -5px;
   display: unset;
@@ -1390,8 +1397,8 @@ body.featured-image-custom-height
 
 .lineBreak {
   background: black
-    radial-gradient(closest-side at 50% 50%, #ffe100 0%, #ffe10000 100%) 0% 0%
-    no-repeat padding-box;
+  radial-gradient(closest-side at 50% 50%, #ffe100 0%, #ffe10000 100%) 0% 0%
+  no-repeat padding-box;
   height: 12px;
   top: -5px;
 }
@@ -1400,7 +1407,6 @@ body.featured-image-custom-height
   padding: 0px 15px 1px 15px;
   margin: 0 -15px;
   overflow-wrap: break-word;
-  background-color: rgb(0, 0, 0);
 }
 
 .main-content article.post.sticky {
@@ -2941,16 +2947,16 @@ input[required] + label:after {
 }
 
 .slider-competition .background-image .image-overlay {
-    background: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .slider-competition .slider-overlay {
@@ -3083,9 +3089,9 @@ input[required] + label:after {
 }
 
 .slider-competition
-  .slider-overlay
-  .lty-lottery-countdown-timer
-  .lty-lottery-timer {
+.slider-overlay
+.lty-lottery-countdown-timer
+.lty-lottery-timer {
   color: var(--color-white);
   font-size: 9px;
   text-transform: uppercase;
@@ -3222,11 +3228,26 @@ input[required] + label:after {
   display: block;
 }
 
-.section-heading p {
-  font-weight: 600;
+.section-heading > p {
+  font-weight: 700;
   text-align: center;
   font-size: 40px;
-  color: white;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  margin-bottom: 70px;
+}
+.section-heading > p:after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background-image: url(./../images/divider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #compBackground {
@@ -3424,21 +3445,21 @@ input[required] + label:after {
 }
 
 .product-item-thumbnail
-  .lty-shop-timer-wrapper
-  .lty-lottery-countdown-timer
-  #lty_lottery_days,
+.lty-shop-timer-wrapper
+.lty-lottery-countdown-timer
+#lty_lottery_days,
 .product-item-thumbnail
-  .lty-shop-timer-wrapper
-  .lty-lottery-countdown-timer
-  #lty_lottery_hours,
+.lty-shop-timer-wrapper
+.lty-lottery-countdown-timer
+#lty_lottery_hours,
 .product-item-thumbnail
-  .lty-shop-timer-wrapper
-  .lty-lottery-countdown-timer
-  #lty_lottery_minutes,
+.lty-shop-timer-wrapper
+.lty-lottery-countdown-timer
+#lty_lottery_minutes,
 .product-item-thumbnail
-  .lty-shop-timer-wrapper
-  .lty-lottery-countdown-timer
-  #lty_lottery_seconds {
+.lty-shop-timer-wrapper
+.lty-lottery-countdown-timer
+#lty_lottery_seconds {
   color: var(--color-white) !important;
 }
 
@@ -3448,9 +3469,9 @@ input[required] + label:after {
 }
 
 .product-item-thumbnail
-  .lty-shop-timer-wrapper
-  .lty-shop-timer-container
-  .lty-shop-timer-section {
+.lty-shop-timer-wrapper
+.lty-shop-timer-container
+.lty-shop-timer-section {
   float: unset;
 }
 
@@ -3599,7 +3620,7 @@ div.product .product-item-info .loop-progress-bar {
   color: #434343;
 }
 .section-heading .wpb_wrapper {
-    position: relative;
+  position: relative;
   margin-bottom: 35px !important;
 }
 .section-heading .wpb_wrapper p {
@@ -3609,15 +3630,15 @@ div.product .product-item-info .loop-progress-bar {
   line-height: 74px;
   font-family: var(--font-family);
   font-weight: bold;
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .section-heading .wpb_wrapper:after {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    left: 0;
-    width: 100%;
-    height: 35px;
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 35px;
   background-image: url('./../images/divider.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -3861,7 +3882,7 @@ div.product .product-item-info .loop-progress-bar {
   left: 0;
   right: 0;
   background: transparent linear-gradient(0deg, #000203 24%, #00020300 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   height: 356px;
   bottom: 0;
   z-index: 5;
@@ -3961,7 +3982,7 @@ div#product-1252773:after {
 a.product-item-thumbnail:after {
   content: "";
   background: transparent linear-gradient(0deg, #131b27 0%, #131b2700 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   position: absolute;
   left: 0;
   right: 0;
@@ -3970,13 +3991,13 @@ a.product-item-thumbnail:after {
   display: none;
 }
 
- .reviews .review-item {
+.reviews .review-item {
   /* width: (33.33% - 30px); */
   text-align: center;
   padding: 70px 0 0 630px;
   margin: 0;
   position: relative;
-   height: 475px;
+  height: 475px;
 }
 .review-item:before {
   content: '';
@@ -4281,7 +4302,7 @@ p.lost_password a:hover {
 }
 
 .heading-sm {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 43px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
@@ -4375,9 +4396,14 @@ p#move-to-entries,
   letter-spacing: 0.32px;
   line-height: 19px;
 }
-a.checkout-button.button.alt.wc-forward:hover {
-  background: #f78500 !important;
-  transition: 0s;
+a.checkout-button.button.alt.wc-forward:hover,
+a.checkout-button.button.alt.wc-forward:focus{
+  background: rgba(214,182,107,1) !important;
+  background: -moz-linear-gradient(45deg, rgba(214,182,107,1) 0%, rgba(214,182,107,1) 100%) !important;
+  background: -webkit-linear-gradient(45deg, rgba(214,182,107,1) 0%,rgba(214,182,107,1) 100%) !important;
+  background: linear-gradient(45deg, rgba(214,182,107,1) 0%,rgba(214,182,107,1) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6b66b', endColorstr='#d6b66b',GradientType=1 ) !important;
+  color: var(--color-black) !important;
 }
 #payment .form-row.place-order > button:hover {
   background: #f78500 !important;
@@ -4490,7 +4516,7 @@ ul.lty-lottery-answers li {
 
 ul.lty-lottery-answers li:hover {
   background: transparent linear-gradient(180deg, #f7d800 0%, #ff8401 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   border: 0;
   padding: 7px 40px;
   color: #000000;
@@ -4500,7 +4526,7 @@ ul.lty-lottery-answers li.lty-selected {
   border: 0;
   padding: 7px 40px;
   background: transparent linear-gradient(180deg, #f7d800 0%, #ff8401 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
 }
 
 .color-graph-item {
@@ -4551,7 +4577,7 @@ ul.lty-lottery-answers li.lty-selected {
 
 .lty-ticket-number-wrapper ul li {
   background: transparent linear-gradient(180deg, #202737 0%, #20273700 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   border: 1px solid #3e4963;
   font-size: 16px;
   font: normal normal normal 20px/21px Oxygen;
@@ -4575,7 +4601,7 @@ ul.lty-lottery-answers li.lty-selected {
   color: white;
   opacity: 100%;
   background: transparent linear-gradient(180deg, #202737 0%, #20273700 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   border: 1px solid #3e4963;
   margin: 5px;
   font: normal normal normal 20px/21px Oxygen;
@@ -4585,7 +4611,7 @@ ul.lty-lottery-answers li.lty-selected {
 
 .lty-lottery-ticket-panel .lty-ticket-number-wrapper ul li:hover {
   background: transparent linear-gradient(180deg, #f7d800 0%, #ff8401 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   color: #000000;
 }
 
@@ -4596,12 +4622,12 @@ ul.lty-lottery-answers li.lty-selected {
 }
 
 .lty-lottery-ticket-panel
-  .lty-ticket-number-wrapper
-  ul
-  li.lty-processing-ticket,
+.lty-ticket-number-wrapper
+ul
+li.lty-processing-ticket,
 .lty-lottery-ticket-panel .lty-ticket-number-wrapper ul li.lty-selected-ticket {
   background: transparent linear-gradient(180deg, #f7d800 0%, #ff8401 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   color: black;
 }
 
@@ -4616,12 +4642,12 @@ ul.lty-lottery-answers li.lty-selected {
 }
 
 .lty-lottery-ticket-panel
-  .lty-ticket-number-wrapper
-  ul
-  li.lty-ticket.lty-reserving-ticket {
+.lty-ticket-number-wrapper
+ul
+li.lty-ticket.lty-reserving-ticket {
   cursor: progress;
   background: transparent linear-gradient(180deg, #f7d800 0%, #ff8401 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   color: black;
   opacity: 0.5;
 }
@@ -4671,14 +4697,14 @@ ul.lty-lottery-answers li.lty-selected {
   display: inline-block;
   margin: 0px 8px 8px 0px;
   background: transparent linear-gradient(180deg, #202737 0%, #20273700 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   border: 1px solid #3e4963;
   color: white;
 }
 
 .entry-tabs > span:hover {
   background: transparent linear-gradient(180deg, #f7d800 0%, #ff8401 100%) 0%
-    0% no-repeat padding-box;
+  0% no-repeat padding-box;
   color: var(--primary-button-text-color);
 }
 
@@ -4701,8 +4727,8 @@ table.lty-frontend-table.shop_table.shop_table_responsive.lty-ticket-logs-table 
 }
 
 table.lty-frontend-table.shop_table.shop_table_responsive.lty-ticket-logs-table
-  thead
-  th {
+thead
+th {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -4715,8 +4741,8 @@ table.lty-frontend-table.shop_table.shop_table_responsive.lty-ticket-logs-table
 }
 
 table.lty-frontend-table.shop_table.shop_table_responsive.lty-ticket-logs-table
-  tbody
-  td {
+tbody
+td {
   color: white;
   font-size: 18px;
   font-weight: 500;
@@ -4729,9 +4755,9 @@ table.lty-frontend-table.shop_table.shop_table_responsive.lty-ticket-logs-table
 }
 
 table.lty-frontend-table.shop_table.shop_table_responsive.lty-ticket-logs-table
-  tbody
-  tr:last-child
-  td {
+tbody
+tr:last-child
+td {
   border-bottom: unset;
 }
 
@@ -4762,7 +4788,7 @@ button.btn-primary.btn-m.button.alt.lty-lucky-dip-button.lty_manual_add_to_cart 
 
 .page-header {
   padding-bottom: 20px;
-  border-bottom: 7px solid var(--secondary-body-background);
+  border-bottom: none;
 }
 
 .page-header p {
@@ -4799,7 +4825,7 @@ span.back-to-store-btn:before {
 
 h1.entry-title {
   margin-top: 0px;
-  font-size: 60px;
+  font-size: 40px;
   text-transform: capitalize;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -5004,10 +5030,10 @@ span.dashicons.dashicons-list-view {
 }
 
 .visualcomposerstarter.woocommerce-account
-  .woocommerce-MyAccount-content
-  li
-  a
-  p {
+.woocommerce-MyAccount-content
+li
+a
+p {
   margin-top: 10px;
   font-size: 28px;
   text-transform: capitalize;
@@ -5258,10 +5284,10 @@ form.woocommerce-form input,
 }
 
 .visualcomposerstarter
-  .woocommerce-MyAccount-content
-  .addresses
-  .title
-  .edit:hover {
+.woocommerce-MyAccount-content
+.addresses
+.title
+.edit:hover {
   color: #fff;
   background: black;
   border-color: black;
@@ -5556,33 +5582,33 @@ ul.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details:a
 }
 
 .woocommerce-MyAccount-navigation
-  > ul
-  li.woocommerce-MyAccount-navigation-link--orders
-  a::before {
+> ul
+li.woocommerce-MyAccount-navigation-link--orders
+a::before {
   content: "";
   font-family: hwd;
 }
 
 .woocommerce-MyAccount-navigation
-  > ul
-  li.woocommerce-MyAccount-navigation-link--edit-address
-  a::before {
+> ul
+li.woocommerce-MyAccount-navigation-link--edit-address
+a::before {
   content: "";
   font-family: hwd;
 }
 
 .woocommerce-MyAccount-navigation
-  > ul
-  li.woocommerce-MyAccount-navigation-link--edit-account
-  a::before {
+> ul
+li.woocommerce-MyAccount-navigation-link--edit-account
+a::before {
   content: "";
   font-family: hwd;
 }
 
 .woocommerce-MyAccount-navigation
-  > ul
-  li.woocommerce-MyAccount-navigation-link--customer-logout
-  a::before {
+> ul
+li.woocommerce-MyAccount-navigation-link--customer-logout
+a::before {
   content: "";
   font-family: hwd;
 }
@@ -5616,8 +5642,8 @@ form.woocommerce-cart-form {
 }
 
 .wpb_content_element
-  .wpb_accordion_wrapper
-  .wpb_accordion_header.ui-state-active {
+.wpb_accordion_wrapper
+.wpb_accordion_header.ui-state-active {
   background: #3e4963 !important;
   color: #ffffff !important;
   font-weight: 700;
@@ -5751,10 +5777,10 @@ form.woocommerce-ResetPassword.lost_reset_password {
     background: #10141D;
   }
   body:not(.menu-sandwich)
-    #main-menu
-    > ul
-    > li.menu-item-has-children
-    > a:before {
+  #main-menu
+  > ul
+  > li.menu-item-has-children
+  > a:before {
     top: 1.3em !important;
     -webkit-transform: rotate(0deg) !important;
     -ms-transform: rotate(0deg) !important;
@@ -6120,10 +6146,10 @@ form.woocommerce-ResetPassword.lost_reset_password {
     transform: translateX(23px);
   }
   .visualcomposerstarter.woocommerce-account
-    .woocommerce-MyAccount-content
-    li
-    a
-    p {
+  .woocommerce-MyAccount-content
+  li
+  a
+  p {
     font-size: 24px;
   }
   .woo-wallet-sidebar-heading,
@@ -6902,7 +6928,7 @@ footer#footer h5 {
   .reviews-nav {
     max-width: auto;
     margin: 20px auto;
-     float: none;
+    float: none;
   }
   .vc_custom_1617345474605:after {
     content: '';
