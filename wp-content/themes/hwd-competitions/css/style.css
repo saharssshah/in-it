@@ -85,12 +85,17 @@ body {
 body.custom-background {
   background: #F6F1EB url('./../images/page-bg.jpg') !important;
 }
+
 body.post-type-archive-winners,
 body.single-winners .recent-winners{
   background: #F6F1EB url('./../images/page-bg.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+}
+body.woocommerce-checkout,
+body.woocommerce-account{
+  background: #F6F1EB url('./../images/page-bg-dark.jpg') !important;
 }
 body.single-winners {
   background-color: #F6F1EB !important;
@@ -161,6 +166,16 @@ input[type="button"] {
   background: linear-gradient(45deg, rgba(214,182,107,1) 0%,rgba(214,182,107,1) 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6b66b', endColorstr='#d6b66b',GradientType=1 ) !important;
   color: var(--color-black) !important;
+}
+.btn-primary-outline {
+  border: 1px solid #C09453;
+  background-color: transparent;
+  color: #C09453 !important;
+}
+.btn-primary-outline:hover,
+.btn-primary-outline:focus {
+  border: 1px solid #fff;
+  color: #fff !important;
 }
 
 .btn-secondary {
@@ -617,6 +632,35 @@ input[type="button"] {
   padding-left: 3rem !important;
 }
 
+/*Float*/
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+/*Display*/
+.d-none {
+  display: none !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-block {
+  display: block !important;
+}
 
 /*--------------------------------------------------------------
 Accessibility
@@ -1219,9 +1263,9 @@ button.single_add_to_cart_button.button.alt.lty-participate-now-button.lty_manua
 .btn-s {
   display: inline-block;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: normal;
-  padding: 12px 24px;
+  padding: 12px 22px;
   letter-spacing: 1.4px;
 }
 
@@ -4790,8 +4834,8 @@ button.btn-primary.btn-m.button.alt.lty-lucky-dip-button.lty_manual_add_to_cart 
 }
 
 .page-header {
-  padding-bottom: 20px;
-  border-bottom: 7px solid var(--secondary-body-background);
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .page-header p {
@@ -4799,6 +4843,10 @@ button.btn-primary.btn-m.button.alt.lty-lucky-dip-button.lty_manual_add_to_cart 
   line-height: 18px;
   font-family: var(--font-family);
   color: #7e7e7e;
+}
+.woocommerce-checkout .page-header p {
+  color: var(--color-white);
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .page-header h4 {
@@ -4834,7 +4882,7 @@ h1.entry-title {
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
-  margin-bottom: 70px
+  margin-bottom: 70px;
 }
 h1.entry-title:after {
   content: '';
@@ -4847,6 +4895,15 @@ h1.entry-title:after {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.woocommerce-checkout h1.entry-title {
+  color: var(--color-white);
+  margin-bottom: 30px;
+}
+.woocommerce-checkout h1.entry-title:after {
+  display: none;
+}
+
 
 .coupon-container {
   overflow: auto;
@@ -5143,7 +5200,7 @@ table.dataTable tbody tr {
 #add_payment_method #payment,
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
-  background: #10141d !important;
+  background: rgba(35, 32, 28, 0.4) !important;
 }
 
 input#st_gateway-card-number,
@@ -6669,6 +6726,7 @@ form.woocommerce-ResetPassword.lost_reset_password {
   border: solid #3e4963 1px;
   border-bottom: black;
   border-left: black;
+  display: none;
 }
 
 .order-section:after {
@@ -6683,6 +6741,7 @@ form.woocommerce-ResetPassword.lost_reset_password {
   border: solid #3e4963 1px;
   border-bottom: black;
   border-right: black;
+  display: none;
 }
 
 .reviews-nav .slick-slide img {
@@ -6725,6 +6784,14 @@ footer#footer h5 {
   padding: 60px 0 70px 0;
   max-width: 866px;
   margin: 0 auto;
+}
+.woocommerce-account .page-banner {
+  padding: 80px 0 70px 0;
+  background-image: url('./../images/hero-bg.jpg');
+  max-width: 100%;
+  background-blend-mode: overlay;
+  background-color: #4E3D33;
+  background-size: cover;
 }
 .page-banner img {
   margin-bottom: 15px;
