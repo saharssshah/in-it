@@ -2818,3 +2818,22 @@ h2.woocommerce-column__title {
     padding: 23px 35px;
   }
 }
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last {
+  width: 100%;
+  overflow: visible;
+}
+.woocommerce-EditAccountForm.edit-account {
+  width: 50%;
+  position: relative;
+}
+.woocommerce-EditAccountForm.edit-account em {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 20px 0;
+  display: block;
+  font-style: normal;
+}
+.woocommerce-EditAccountForm.edit-account fieldset {
+  position: absolute !important;
+  top: 0;
+  right: 0 !important;
+}

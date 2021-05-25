@@ -5396,12 +5396,16 @@ form.woocommerce-EditAccountForm.edit-account > fieldset > legend {
 form.woocommerce-EditAccountForm.edit-account button.woocommerce-Button.button {
   margin-top: 20px;
   padding: 21px 56px;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0px !important;
+  float: right;
 }
 form.woocommerce-EditAccountForm.edit-account button.woocommerce-Button.button:hover {
-  background: #f78500 !important;
+  background: rgba(214,182,107,1) !important;
+  background: -moz-linear-gradient(45deg, rgba(214,182,107,1) 0%, rgba(214,182,107,1) 100%) !important;
+  background: -webkit-linear-gradient(45deg, rgba(214,182,107,1) 0%,rgba(214,182,107,1) 100%) !important;
+  background: linear-gradient(45deg, rgba(214,182,107,1) 0%,rgba(214,182,107,1) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6b66b', endColorstr='#d6b66b',GradientType=1 ) !important;
 }
 .winner-nav {
   margin-top: 20px;
