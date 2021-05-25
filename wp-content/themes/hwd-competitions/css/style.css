@@ -73,8 +73,8 @@ html {
 }
 
 body {
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 14px;
   font-family: var(--font-family);
   line-height: normal;
   color: #555;
@@ -3683,6 +3683,7 @@ div.product .product-item-info .loop-progress-bar {
   font-family: var(--font-family);
   font-weight: bold;
     text-transform: uppercase;
+  text-align: center;
 }
 .section-heading .wpb_wrapper:after {
     content: '';
@@ -5333,26 +5334,24 @@ form.woocommerce-form input,
 .visualcomposerstarter .woocommerce-MyAccount-content .addresses .title {
   display: flex;
   align-items: center;
-  padding: 10px 15px;
-  background: transparent linear-gradient(160deg, #202737 0%, #07090d 100%);
-  border: solid 1px #3e4963;
+  padding: 20px 30px;
+  background: #584D3E60;
+  margin-top: 20px;
 }
 
 .visualcomposerstarter .woocommerce-MyAccount-content .addresses .title h3 {
-  font-size: 18px;
+  font-size: 15px;
   flex: 1;
-  letter-spacing: 1.8px;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0;
   color: white;
 }
 
 .visualcomposerstarter .woocommerce-MyAccount-content .addresses .title .edit {
-  background: black;
-  border: solid 1px #3e4963;
-  color: #ffffff96;
-  text-transform: capitalize;
+  background: transparent !important;
+  border: solid 1px var(--secondary-color);
+  color: #ffffff !important;
 }
 
 .visualcomposerstarter
@@ -5366,11 +5365,12 @@ form.woocommerce-form input,
 }
 
 .visualcomposerstarter.woocommerce-account .woocommerce-Addresses address {
-  background: var(--secondary-body-background);
-  padding: 10px 15px;
+  background: #100C07;
+  padding: 20px 30px;
   font-size: 12px;
   line-height: 19.2px;
   font-style: normal;
+  border: 1px solid #ffffff10;
 }
 
 form.woocommerce-EditAccountForm.edit-account > fieldset {
